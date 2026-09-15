@@ -4,9 +4,7 @@ import healthController from '../controller/health-controller.js'
 
 const publicRouter = new express.Router()
 publicRouter.post('/api/users', userController.register)
-publicRouter.post('/users', userController.register)
 publicRouter.post('/api/users/login', userController.login)
-publicRouter.post('/users/login', userController.login)
 publicRouter.get('/ping', healthController.ping)
 
 export { publicRouter }
