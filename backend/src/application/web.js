@@ -5,7 +5,14 @@ import { userRouter } from '../route/api.js'
 import cors from 'cors'
 
 export const web = express()
-web.use(cors())
+
+web.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-API-TOKEN']
+  })
+)
 web.use(express.json())
 
 web.use(publicRouter)
