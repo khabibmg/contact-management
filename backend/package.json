@@ -5,6 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "build": "prisma generate",
+    "postinstall": "prisma generate",
     "test": "jest -i"
   },
   "jest": {
@@ -33,7 +34,7 @@
     "@types/uuid": "^9.0.2",
     "babel-jest": "^29.5.0",
     "jest": "^29.5.0",
-    "prisma": "^4.15.0",
+    "prisma": "^4.16.2",
     "supertest": "^6.3.3"
   },
   "allowScripts": {
